@@ -1,10 +1,11 @@
 import React from 'react';
+import Global from './assets/styles/Global';
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <>
+      <Global />
+    </>
   )
 }
 
