@@ -10,6 +10,9 @@ export interface Theme {
     };
     white: string;
   };
+  fonts: {
+    primary: string;
+  };
 }
 
 export const defaultTheme = {
@@ -23,5 +26,8 @@ export const defaultTheme = {
       extraLightGrayish: "hsl(189, 41%, 97%)",
     },
     white: "hsl(0, 0%, 100%)",
+  },
+  fonts: {
+    primary: "Space Mono",
   }
 }
