@@ -53,6 +53,13 @@ const Global = createGlobalStyle`
       background-color: ${theme.colors.cyan.lightGrayish};
     `}
   }
+
+  #root {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export default Global;
