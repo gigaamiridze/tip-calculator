@@ -47,7 +47,11 @@ const Global = createGlobalStyle`
 
   // Elements Styles
   body {
-    font-family: ${({theme}) => theme.fonts.primary};
+    height: 100vh;
+    ${({theme}) => `
+      font-family: ${theme.fonts.primary};
+      background-color: ${theme.colors.cyan.lightGrayish};
+    `}
   }
 `;
 
