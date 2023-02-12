@@ -8,6 +8,7 @@ const ContentContainer = styled.div`
 const ContentContainerWithBG = styled(ContentContainer)`
   background-color: ${({theme}) => theme.colors.cyan.dark};
   border-radius: 15px;
+  padding: 40px;
 `;
 
 export { ContentContainer, ContentContainerWithBG };
