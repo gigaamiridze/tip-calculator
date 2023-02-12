@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const ButtonsContainer = styled.div`
+const TipContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 `;
 
-export default ButtonsContainer;
+export default TipContainer;
