@@ -1,20 +1,20 @@
 import React from "react";
 // Importing Components
-import { FlexBox } from "./elements/FlexBox";
+import { FlexBoxWithMargin } from "./elements/FlexBox";
 import BillName from "./elements/BillName";
 import PerPerson from "./elements/PerPerson";
 import Price from "./elements/Price";
 
-function TipAmount() {
+function Total() {
   return (
-    <FlexBox>
+    <FlexBoxWithMargin>
       <div>
-        <BillName>Tip Amount</BillName>
+        <BillName>Total</BillName>
         <PerPerson>/ person</PerPerson>
       </div>
       <Price>$0.00</Price>
-    </FlexBox>
+    </FlexBoxWithMargin>
   )
 }
 
-export default TipAmount;
+export default Total;

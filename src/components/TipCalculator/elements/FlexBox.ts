@@ -6,4 +6,8 @@ const FlexBox = styled.div`
   align-items: center;
 `;
 
-export default FlexBox;
+const FlexBoxWithMargin = styled(FlexBox)`
+  margin-top: 25px;
+`;
+
+export { FlexBox, FlexBoxWithMargin };
