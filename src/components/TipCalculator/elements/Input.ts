@@ -1,7 +1,20 @@
 import styled from "styled-components";
+import { InputProps } from "../../../types/input";
 import dollar from '../../../assets/svg/dollar.svg';
+import person from '../../../assets/svg/person.svg';
 
-const Input = styled.input`
+const icon = (props: InputProps) => {
+  switch (props.iconType) {
+    case "bill":
+      return dollar;
+    case "person":
+      return person;
+    default:
+      return "";
+  }
+}
+
+const Input = styled.input<InputProps>`
   ${({theme}) => `
     font-family: ${theme.fonts.primary};
     color: ${theme.colors.cyan.dark};
@@ -12,7 +25,7 @@ const Input = styled.input`
   font-size: 24px;
   font-weight: 700;
   text-align: right;
-  background-image: url(${dollar});
+  background-image: url(${icon});
   background-repeat: no-repeat;
   background-position: left 20px center;
   border: none;
