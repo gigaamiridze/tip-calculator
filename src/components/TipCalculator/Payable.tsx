@@ -1,12 +1,12 @@
 import React from "react";
 // Importing Components
-import { WrapperWithBG } from "./elements/Wrapper";
+import { ContentContainerWithBG } from "./elements/ContentContainer";
 
 function Payable() {
   return (
-    <WrapperWithBG>
+    <ContentContainerWithBG>
       
-    </WrapperWithBG>
+    </ContentContainerWithBG>
   )
 }
 
