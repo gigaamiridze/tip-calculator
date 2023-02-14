@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, KeyboardEvent } from "react";
 import { PeopleProps } from "../../types/people";
 // Importing Components
 import { FlexWrapper } from "./elements/FlexWrapper";
@@ -10,6 +10,12 @@ function People(props: PeopleProps) {
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setPeople(event.target.valueAsNumber);
+  }
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === '.') {
+      event.preventDefault();
+    }
   }
 
   return (
@@ -24,6 +30,7 @@ function People(props: PeopleProps) {
         min={0}
         value={people}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       />
     </FlexWrapper>
   )
