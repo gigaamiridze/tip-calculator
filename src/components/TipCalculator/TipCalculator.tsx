@@ -9,6 +9,10 @@ function TipCalculator() {
   const [tip, setTip] = useState<number | undefined>(undefined);
   const [people, setPeople] = useState<number | undefined>(undefined);
 
+  const alright = bill !== undefined && tip !== undefined && people !== undefined;
+  const tipAmount = alright && (bill * tip / people).toFixed(2);
+  const total = alright && (bill * (1 + tip) / people).toFixed(2);
+
   return (
     <Card>
       <Calculation
@@ -19,7 +23,10 @@ function TipCalculator() {
         setTip={setTip}
         setPeople={setPeople}
       />
-      <Payable />
+      <Payable 
+        tipAmount={tipAmount} 
+        total={total}
+      />
     </Card>
   )
 }

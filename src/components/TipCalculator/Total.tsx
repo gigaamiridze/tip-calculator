@@ -1,18 +1,22 @@
 import React from "react";
+import { TotalProps } from "../../types/total";
 // Importing Components
 import { FlexBoxWithMargin } from "./elements/FlexBox";
 import BillName from "./elements/BillName";
 import PerPerson from "./elements/PerPerson";
 import Price from "./elements/Price";
 
-function Total() {
+function Total(props: TotalProps) {
+  const { total } = props;
+  const showTotal = !(total === 'NaN' || total === 'Infinity');
+
   return (
     <FlexBoxWithMargin>
       <div>
         <BillName>Total</BillName>
         <PerPerson>/ person</PerPerson>
       </div>
-      <Price>$0.00</Price>
+      <Price>{showTotal ? total : "$0.00"}</Price>
     </FlexBoxWithMargin>
   )
 }
