@@ -1,4 +1,5 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
+import { TipProps } from "../../types/tip";
 // Importing Components
 import { FlexWrapperWithMargin } from "./elements/FlexWrapper";
 import Label from "./elements/Label";
@@ -6,7 +7,13 @@ import Input from "./elements/Input";
 import TipContainer from "./elements/TipContainer";
 import TipButton from "./elements/TipButton";
 
-function Tip() {
+function Tip(props: TipProps) {
+  const { tip, setTip } = props;
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setTip(event.target.valueAsNumber / 100);
+  }
+
   return (
     <FlexWrapperWithMargin>
       <Label>Select Tip %</Label>
@@ -18,10 +25,14 @@ function Tip() {
         ))}
         <Input
           style={{ width: 117 }}
-          type="text"
+          type="number"
           placeholder="Custom"
           name="custom"
           id="custom"
+          min={0}
+          max={100}
+          value={tip && tip * 100}
+          onChange={handleChange}
         />
       </TipContainer>
     </FlexWrapperWithMargin>

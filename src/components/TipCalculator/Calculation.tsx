@@ -12,7 +12,7 @@ function Calculation(props: CalculationProps) {
   return (
     <ContentContainer>
       <Bill bill={bill} setBill={setBill} />
-      <Tip />
+      <Tip tip={tip} setTip={setTip} />
       <People people={people} setPeople={setPeople} />
     </ContentContainer>
   )
