@@ -1,16 +1,19 @@
 import React from "react";
+import { CalculationProps } from "../../types/calculation";
 // Importing Components
 import { ContentContainer } from "./elements/ContentContainer";
 import Bill from "./Bill";
 import Tip from "./Tip";
 import People from "./People";
 
-function Calculation() {
+function Calculation(props: CalculationProps) {
+  const { bill, tip, people, setBill, setTip, setPeople } = props;
+
   return (
     <ContentContainer>
-      <Bill />
+      <Bill bill={bill} setBill={setBill} />
       <Tip />
-      <People />
+      <People people={people} setPeople={setPeople} />
     </ContentContainer>
   )
 }
