@@ -19,7 +19,12 @@ function Tip(props: TipProps) {
       <Label>Select Tip %</Label>
       <TipContainer>
         {[5, 10, 15, 25, 50].map((percentage, index) => (
-          <TipButton key={index} type="button">
+          <TipButton 
+            type="button"
+            key={index}
+            isActive={tip === percentage / 100}
+            onClick={() => setTip(percentage / 100)}
+          >
             {percentage}%
           </TipButton>
         ))}
@@ -31,7 +36,6 @@ function Tip(props: TipProps) {
           id="custom"
           min={0}
           max={100}
-          value={tip && tip * 100}
           onChange={handleChange}
         />
       </TipContainer>

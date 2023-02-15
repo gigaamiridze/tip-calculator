@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { TipButtonProps } from "../../../types/tipButton";
 
-const TipButton = styled.button`
-  ${({theme}) => `
-    background-color: ${theme.colors.cyan.dark};
-    color: ${theme.colors.white};
+const TipButton = styled.button<TipButtonProps>`
+  ${({isActive, theme}) => `
+    background-color: ${isActive ? theme.colors.cyan.strong : theme.colors.cyan.dark};
+    color: ${isActive ? theme.colors.cyan.dark : theme.colors.white};
     font-family: ${theme.fonts.primary};
   `}
   max-width: 117px;
