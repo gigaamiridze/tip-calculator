@@ -15,10 +15,11 @@ const icon = (props: InputProps) => {
 }
 
 const Input = styled.input<InputProps>`
-  ${({theme}) => `
+  ${({isError, theme}) => `
     font-family: ${theme.fonts.primary};
     color: ${theme.colors.cyan.dark};
     background-color: ${theme.colors.cultured};
+    border: 2px solid ${isError ? theme.colors.orange : theme.colors.cultured};
   `}
   width: 100%;
   height: 45px;
@@ -28,11 +29,10 @@ const Input = styled.input<InputProps>`
   background-image: url(${icon});
   background-repeat: no-repeat;
   background-position: left 20px center;
-  border: none;
   outline: none;
   border-radius: 5px;
   padding-right: 17px;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &::placeholder {
     color: ${({theme}) => theme.colors.cyan.dark};
@@ -40,7 +40,7 @@ const Input = styled.input<InputProps>`
   }
 
   &:hover {
-    outline: 2px solid ${({theme}) => theme.colors.cyan.strong};
+    border: 2px solid ${({isError, theme}) => isError ? theme.colors.orange : theme.colors.cyan.strong};
   }
 `;
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const FlexWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: 5px;
