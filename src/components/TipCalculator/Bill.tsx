@@ -9,7 +9,9 @@ function Bill(props: BillProps) {
   const { bill, setBill } = props;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setBill(event.target.valueAsNumber);
+    if (event.target.value.length < 8) {
+      setBill(event.target.valueAsNumber);
+    }
   }
 
   return (

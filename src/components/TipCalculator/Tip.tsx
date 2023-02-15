@@ -11,7 +11,9 @@ function Tip(props: TipProps) {
   const { tip, setTip } = props;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setTip(event.target.valueAsNumber / 100);
+    if (event.target.value.length < 4) {
+      setTip(event.target.valueAsNumber / 100);
+    }
   }
 
   return (
@@ -36,6 +38,7 @@ function Tip(props: TipProps) {
           id="custom"
           min={0}
           max={100}
+          value={tip && tip * 100}
           onChange={handleChange}
         />
       </TipContainer>

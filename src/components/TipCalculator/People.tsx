@@ -9,7 +9,9 @@ function People(props: PeopleProps) {
   const { people, setPeople } = props;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setPeople(event.target.valueAsNumber);
+    if (event.target.value.length < 5) {
+      setPeople(event.target.valueAsNumber);
+    }
   }
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
