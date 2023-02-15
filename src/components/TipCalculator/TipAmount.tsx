@@ -7,8 +7,7 @@ import PerPerson from "./elements/PerPerson";
 import Price from "./elements/Price";
 
 function TipAmount(props: TipAmountProps) {
-  const { tipAmount } = props;
-  const showTip = !(tipAmount === 'NaN' || tipAmount === 'Infinity');
+  const { showTip, tipAmount } = props;
 
   return (
     <FlexBox>
@@ -16,7 +15,7 @@ function TipAmount(props: TipAmountProps) {
         <BillName>Tip Amount</BillName>
         <PerPerson>/ person</PerPerson>
       </div>
-      <Price>{showTip ? tipAmount : "$0.00"}</Price>
+      <Price>${showTip ? tipAmount : "0.00"}</Price>
     </FlexBox>
   )
 }

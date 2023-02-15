@@ -7,8 +7,7 @@ import PerPerson from "./elements/PerPerson";
 import Price from "./elements/Price";
 
 function Total(props: TotalProps) {
-  const { total } = props;
-  const showTotal = !(total === 'NaN' || total === 'Infinity');
+  const { showTotal, total } = props;
 
   return (
     <FlexBoxWithMargin>
@@ -16,7 +15,7 @@ function Total(props: TotalProps) {
         <BillName>Total</BillName>
         <PerPerson>/ person</PerPerson>
       </div>
-      <Price>{showTotal ? total : "$0.00"}</Price>
+      <Price>${showTotal ? total : "0.00"}</Price>
     </FlexBoxWithMargin>
   )
 }

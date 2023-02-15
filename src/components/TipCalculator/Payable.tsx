@@ -7,13 +7,13 @@ import Total from "./Total";
 import ResetButton from "./elements/ResetButton";
 
 function Payable(props: PayableProps) {
-  const { tipAmount, total } = props;
+  const { showTip, tipAmount, showTotal, total } = props;
 
   return (
     <ContentContainerWithBG>
       <div>
-        <TipAmount tipAmount={tipAmount} />
-        <Total total={total} />
+        <TipAmount showTip={showTip} tipAmount={tipAmount} />
+        <Total showTotal={showTotal} total={total} />
       </div>
       <ResetButton type="button">RESET</ResetButton>
     </ContentContainerWithBG>
