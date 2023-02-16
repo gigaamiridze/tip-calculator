@@ -8,11 +8,12 @@ import TipContainer from "./elements/TipContainer";
 import TipButton from "./elements/TipButton";
 
 function Tip(props: TipProps) {
-  const { tip, setTip } = props;
+  const { buttonTip, customTip, setButtonTip, setCustomTip } = props;
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length < 4) {
-      setTip(event.target.valueAsNumber / 100);
+      setCustomTip(event.target.valueAsNumber / 100);
+      setButtonTip(undefined);
     }
   }
 
@@ -24,8 +25,11 @@ function Tip(props: TipProps) {
           <TipButton 
             type="button"
             key={index}
-            isActive={tip === percentage / 100}
-            onClick={() => setTip(percentage / 100)}
+            isActive={buttonTip === percentage / 100}
+            onClick={() => {
+              setButtonTip(percentage / 100)
+              setCustomTip("");
+            }}
           >
             {percentage}%
           </TipButton>
@@ -38,7 +42,7 @@ function Tip(props: TipProps) {
           id="custom"
           min={0}
           max={100}
-          value={tip && tip * 100}
+          value={customTip && customTip * 100}
           onChange={handleChange}
         />
       </TipContainer>

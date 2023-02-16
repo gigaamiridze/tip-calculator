@@ -7,12 +7,17 @@ import Tip from "./Tip";
 import People from "./People";
 
 function Calculation(props: CalculationProps) {
-  const { bill, tip, people, setBill, setTip, setPeople } = props;
+  const { bill, buttonTip, customTip, people, setBill, setButtonTip, setCustomTip, setPeople } = props;
 
   return (
     <ContentContainer>
       <Bill bill={bill} setBill={setBill} />
-      <Tip tip={tip} setTip={setTip} />
+      <Tip 
+        buttonTip={buttonTip} 
+        customTip={customTip} 
+        setButtonTip={setButtonTip} 
+        setCustomTip={setCustomTip} 
+      />
       <People people={people} setPeople={setPeople} />
     </ContentContainer>
   )

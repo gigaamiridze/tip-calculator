@@ -1,4 +1,6 @@
 export interface TipProps {
-  tip: any;
-  setTip: React.Dispatch<any>;
+  buttonTip: any;
+  customTip: any;
+  setButtonTip: React.Dispatch<any>;
+  setCustomTip: React.Dispatch<any>;
 }

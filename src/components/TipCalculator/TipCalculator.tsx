@@ -6,10 +6,13 @@ import Payable from './Payable';
 
 function TipCalculator() {
   const [bill, setBill] = useState<any>(undefined);
-  const [tip, setTip] = useState<any>(undefined);
+  const [buttonTip, setButtonTip] = useState<any>(undefined);
+  const [customTip, setCustomTip] = useState<any>(undefined);
   const [people, setPeople] = useState<any>(undefined);
 
-  const alright = bill !== undefined && tip !== undefined && people !== undefined;
+  const tip = buttonTip ? buttonTip : customTip;
+
+  const alright = bill !== undefined && (buttonTip !== undefined || customTip !== undefined) && people !== undefined;
   const tipAmount = alright && ((bill * tip) / people).toFixed(2);
   const total = alright && ((bill * (1 + tip)) / people).toFixed(2);
 
@@ -18,7 +21,8 @@ function TipCalculator() {
 
   const resetInputs = () => {
     setBill("");
-    setTip("");
+    setButtonTip("");
+    setCustomTip("");
     setPeople("");
   }
   
@@ -26,10 +30,12 @@ function TipCalculator() {
     <Card>
       <Calculation
         bill={bill}
-        tip={tip}
+        buttonTip={buttonTip}
+        customTip={customTip}
         people={people}
         setBill={setBill}
-        setTip={setTip}
+        setButtonTip={setButtonTip}
+        setCustomTip={setCustomTip}
         setPeople={setPeople}
       />
       <Payable
