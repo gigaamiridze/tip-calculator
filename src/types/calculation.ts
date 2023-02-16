@@ -1,8 +1,8 @@
 export interface CalculationProps {
-  bill: number | undefined;
-  tip: number | undefined;
-  people: number | undefined;
-  setBill: React.Dispatch<React.SetStateAction<number | undefined>>;
-  setTip: React.Dispatch<React.SetStateAction<number | undefined>>;
-  setPeople: React.Dispatch<React.SetStateAction<number | undefined>>;
+  bill: any;
+  tip: any;
+  people: any;
+  setBill: React.Dispatch<any>;
+  setTip: React.Dispatch<any>;
+  setPeople: React.Dispatch<any>;
 }

@@ -1,4 +1,4 @@
 export interface BillProps {
-  bill: number | undefined;
-  setBill: React.Dispatch<React.SetStateAction<number | undefined>>;
+  bill: any;
+  setBill: React.Dispatch<any>;
 }

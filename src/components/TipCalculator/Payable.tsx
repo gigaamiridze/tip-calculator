@@ -7,7 +7,7 @@ import Total from "./Total";
 import ResetButton from "./elements/ResetButton";
 
 function Payable(props: PayableProps) {
-  const { showTip, tipAmount, showTotal, total } = props;
+  const { showTip, tipAmount, showTotal, total, resetInputs } = props;
 
   return (
     <ContentContainerWithBG>
@@ -15,7 +15,7 @@ function Payable(props: PayableProps) {
         <TipAmount showTip={showTip} tipAmount={tipAmount} />
         <Total showTotal={showTotal} total={total} />
       </div>
-      <ResetButton type="button">RESET</ResetButton>
+      <ResetButton type="button" onClick={resetInputs}>RESET</ResetButton>
     </ContentContainerWithBG>
   )
 }

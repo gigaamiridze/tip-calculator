@@ -1,4 +1,4 @@
 export interface PeopleProps {
-  people: number | undefined;
-  setPeople: React.Dispatch<React.SetStateAction<number | undefined>>;
+  people: any;
+  setPeople: React.Dispatch<any>;
 }
