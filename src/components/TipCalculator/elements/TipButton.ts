@@ -15,6 +15,14 @@ const TipButton = styled.button<TipButtonProps>`
   cursor: pointer;
   font-size: 24px;
   font-weight: 700;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    ${({theme}) => `
+      background-color: ${theme.colors.cyan.strong};
+      color: ${theme.colors.cyan.dark};
+    `}
+  }
 `;
 
 export default TipButton;
