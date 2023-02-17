@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TipButtonProps } from "../../../types/tipButton";
+import { TipButtonProps } from "../../../types/tip";
 
 const TipButton = styled.button<TipButtonProps>`
   ${({isActive, theme}) => `

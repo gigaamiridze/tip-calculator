@@ -1,5 +1,5 @@
 import React from "react";
-import { TipAmountProps } from "../../types/tipAmount";
+import { TipAmountProps } from "../../types/tip";
 // Importing Components
 import { FlexBox } from "./elements/FlexBox";
 import BillName from "./elements/BillName";
