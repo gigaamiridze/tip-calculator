@@ -12,6 +12,7 @@ export interface Theme {
     cultured: string;
     crystal: string;
     orange: string;
+    darkGreen: string;
   };
   fonts: {
     primary: string;
@@ -32,6 +33,7 @@ export const defaultTheme = {
     cultured: "hsla(185, 38%, 97%, 1)",
     crystal: "hsla(172, 61%, 77%, 1)",
     orange: "hsla(13, 70%, 61%, 1)",
+    darkGreen: "hsla(183, 78%, 24%, 1)",
   },
   fonts: {
     primary: "Space Mono",
