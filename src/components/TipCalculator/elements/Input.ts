@@ -44,4 +44,14 @@ const Input = styled.input<InputProps>`
   }
 `;
 
-export default Input;
+const CustomInput = styled(Input)`
+  width: 30%;
+  padding-right: 0;
+  text-align: center;
+
+  @media (max-width: 820px) {
+    width: calc(50% - 8px);
+  }
+`;
+
+export { Input, CustomInput };

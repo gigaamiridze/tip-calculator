@@ -6,6 +6,10 @@ const Price = styled.span`
   letter-spacing: -1;
   color: ${({theme}) => theme.colors.cyan.strong};
   line-height: 70px;
+
+  @media (max-width: 820px) {
+    font-size: 40px;
+  } 
 `;
 
 export default Price;

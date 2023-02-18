@@ -2,8 +2,8 @@ import React, { useState, useEffect, ChangeEvent, KeyboardEvent } from "react";
 import { PeopleProps } from "../../types/people";
 // Importing Components
 import { FlexWrapper } from "./elements/FlexWrapper";
+import { Input } from "./elements/Input";
 import Label from "./elements/Label";
-import Input from "./elements/Input";
 import Error from "./elements/Error";
 
 function People(props: PeopleProps) {

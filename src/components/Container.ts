@@ -7,6 +7,11 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   row-gap: 50px;
+
+  @media (max-width: 820px) {
+    padding: 75px 0 35px;
+    row-gap: 35px;
+  }
 `;
 
 export default Container;

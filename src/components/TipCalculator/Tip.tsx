@@ -2,8 +2,8 @@ import React, { ChangeEvent } from "react";
 import { TipProps } from "../../types/tip";
 // Importing Components
 import { FlexWrapperWithMargin } from "./elements/FlexWrapper";
+import { CustomInput } from "./elements/Input";
 import Label from "./elements/Label";
-import Input from "./elements/Input";
 import TipContainer from "./elements/TipContainer";
 import TipButton from "./elements/TipButton";
 
@@ -34,8 +34,7 @@ function Tip(props: TipProps) {
             {percentage}%
           </TipButton>
         ))}
-        <Input
-          style={{ width: 117 }}
+        <CustomInput
           type="number"
           placeholder="Custom"
           name="custom"

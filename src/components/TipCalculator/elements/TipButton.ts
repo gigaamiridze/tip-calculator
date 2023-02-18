@@ -7,8 +7,7 @@ const TipButton = styled.button<TipButtonProps>`
     color: ${isActive ? theme.colors.cyan.dark : theme.colors.white};
     font-family: ${theme.fonts.primary};
   `}
-  max-width: 117px;
-  width: 100%;
+  min-width: 30%;
   height: 45px;
   border: none;
   border-radius: 5px;
@@ -22,6 +21,10 @@ const TipButton = styled.button<TipButtonProps>`
       background-color: ${theme.colors.cyan.strong};
       color: ${theme.colors.cyan.dark};
     `}
+  }
+
+  @media (max-width: 820px) {
+    min-width: calc(50% - 8px);
   }
 `;
 

@@ -12,6 +12,10 @@ const ContentContainerWithBG = styled(ContentContainer)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
 `;
 
 export { ContentContainer, ContentContainerWithBG };

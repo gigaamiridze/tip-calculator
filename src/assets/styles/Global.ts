@@ -59,6 +59,10 @@ const Global = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 950px) {
+      padding: 0 25px;
+    }
   }
 
   /* Chrome, Safari, Edge, Opera */

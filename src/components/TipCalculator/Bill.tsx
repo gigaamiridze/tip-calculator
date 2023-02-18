@@ -2,8 +2,8 @@ import React, { ChangeEvent } from "react";
 import { BillProps } from '../../types/bill';
 // Importing Components
 import { FlexWrapper } from "./elements/FlexWrapper";
+import { Input } from "./elements/Input";
 import Label from "./elements/Label";
-import Input from "./elements/Input";
 
 function Bill(props: BillProps) {
   const { bill, setBill } = props;
