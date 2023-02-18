@@ -26,6 +26,12 @@ const TipButton = styled.button<TipButtonProps>`
   @media (max-width: 820px) {
     min-width: calc(50% - 8px);
   }
+
+  @media (max-width: 375px) {
+    min-width: calc(50% - 6px); 
+    height: 42px;
+    font-size: 20px;
+  }
 `;
 
 export default TipButton;

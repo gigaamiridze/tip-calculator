@@ -3,6 +3,11 @@ import styled from "styled-components";
 const ContentContainer = styled.div`
   width: 50%;
   padding: 15px;
+
+  @media (max-width: 667px) {
+    width: 100%;
+    padding: 10px;
+  }
 `;
 
 const ContentContainerWithBG = styled(ContentContainer)`
@@ -15,6 +20,10 @@ const ContentContainerWithBG = styled(ContentContainer)`
 
   @media (max-width: 768px) {
     padding: 30px;
+  }
+
+  @media (max-width: 667px) {
+    padding: 22px;
   }
 `;
 

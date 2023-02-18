@@ -52,6 +52,10 @@ const Global = createGlobalStyle`
       font-family: ${theme.fonts.primary};
       background-color: ${theme.colors.cyan.lightGrayish};
     `}
+
+    @media (max-width: 820px) {
+      height: 100%;
+    }
   }
 
   #root {
@@ -62,6 +66,26 @@ const Global = createGlobalStyle`
 
     @media (max-width: 950px) {
       padding: 0 25px;
+    }
+
+    @media (max-width: 667px) {
+      padding: 0 100px;
+    }
+
+    @media (max-width: 630px) {
+      padding: 0 70px;
+    }
+
+    @media (max-width: 550px) {
+      padding: 0 50px;
+    }
+
+    @media (max-width: 520px) {
+      padding: 0 25px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0;
     }
   }
 

@@ -8,6 +8,10 @@ const FlexBox = styled.div`
 
 const FlexBoxWithMargin = styled(FlexBox)`
   margin-top: 25px;
+
+  @media (max-width: 667px) {
+    margin-top: 0;
+  }
 `;
 
 export { FlexBox, FlexBoxWithMargin };

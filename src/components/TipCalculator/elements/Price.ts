@@ -9,7 +9,16 @@ const Price = styled.span`
 
   @media (max-width: 820px) {
     font-size: 40px;
-  } 
+  }
+
+  @media (max-width: 700px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 32px;
+    line-height: 65px;
+  }
 `;
 
 export default Price;

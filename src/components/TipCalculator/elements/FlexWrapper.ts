@@ -9,6 +9,10 @@ const FlexWrapper = styled.div`
 
 const FlexWrapperWithMargin = styled(FlexWrapper)`
   margin: 30px 0;
+
+  @media (max-width: 375px) {
+    margin: 22px 0;
+  }
 `;
 
 export { FlexWrapper, FlexWrapperWithMargin };

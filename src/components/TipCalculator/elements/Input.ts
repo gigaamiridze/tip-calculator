@@ -42,6 +42,13 @@ const Input = styled.input<InputProps>`
   &:hover {
     border: 2px solid ${({isError, theme}) => isError ? theme.colors.orange : theme.colors.cyan.strong};
   }
+
+  @media (max-width: 375px) {
+    height: 42px;
+    font-size: 20px; 
+    padding-right: 15px;
+    background-position: left 15px center;
+  }
 `;
 
 const CustomInput = styled(Input)`

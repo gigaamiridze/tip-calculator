@@ -9,8 +9,17 @@ const Container = styled.div`
   row-gap: 50px;
 
   @media (max-width: 820px) {
-    padding: 75px 0 35px;
+    padding: 35px 0;
     row-gap: 35px;
+  }
+
+  @media (max-width: 480px) {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 375px) {
+    padding-top: 30px;
+    row-gap: 30px;
   }
 `;
 
